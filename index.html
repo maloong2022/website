@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happiness</title>
+  </head>
+  <body>
+    <div class="main">
+      <section>
+        <header>
+          <a href="#" class="logo">Happiness.</a>
+          <div class="toggle" onclick="toggleMenu();"></div>
+        </header>
+        <div class="glass"></div>
+        <div class="content">
+          <h2>Happiness...<br /><span>Just Play the Bubbles.</span></h2>
+        </div>
+        <ul class="sci">
+          <li style="--i: 1">
+            <div class="btn"><a href="#">Facebook</a></div>
+          </li>
+          <li style="--i: 2">
+            <div class="btn"><a href="#">Twitter</a></div>
+          </li>
+          <li style="--i: 3">
+            <div class="btn"><a href="#">Instagram</a></div>
+          </li>
+        </ul>
+        <ul class="navigation">
+          <li style="--i: 1">
+            <a href="#">Home</a>
+          </li>
+          <li style="--i: 2">
+            <a href="#">About</a>
+          </li>
+          <li style="--i: 3">
+            <a href="#">Tour</a>
+          </li>
+          <li style="--i: 4">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- <div class="text-container">Bubbles</div> -->
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="text/javascript">
+      function toggleMenu() {
+        const toggleMenu = document.querySelector(".toggle");
+        const section = document.querySelector("section");
+        toggleMenu.classList.toggle("active");
+        section.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
